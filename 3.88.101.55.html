@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Personal</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background: #4d021e;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+        }
+        main {
+            padding: 20px;
+        }
+        form {
+            background: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #004b04;
+            border-radius: 4px;
+        }
+        button {
+            background: #024042;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+        button:hover {
+            background: #550225;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Bienvenido a Mi Página</h1>
+    <p>Contacto: <a href="mailto:tucorreo@ejemplo.com" style="color: white;">rsanrod024@ieszaidinvergeles.org</a></p>
+</header>
+
+<main>
+    <section>
+        <h2>Sobre Mí</h2>
+        <p>¡Hola! Soy Rodrigo. Aquí puedes encontrar información sobre mí y contactarme para cualquier pregunta que tengas.</p>
+        <h3>Curiosidades</h3>
+    <ul>
+        <li>Amante del mundo gaming y todo lo relacionado</li>
+        <li>Soy un amante de la musica</li>
+        <li>Disfruto de la lectura, especialmente de novelas de ciencia ficción y terror.</li>
+        <li>Me gusta practicar deportes al aire libre, como el senderismo y el ciclismo.</li>
+        <li>Adoro las peliculas de terror y los thrillers.</li>
+    </ul>
+    </section>
+    
+
+    <section>
+        <h2>Formulario de Contacto</h2>
+        <form action="mailto:tucorreo@ejemplo.com" method="post" enctype="text/plain">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="mensaje">Mensaje:</label>
+            <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+    <section>
+        <h2>Cuestionario</h2>
+        <form id="quiz-form">
+            <div>
+                <h3>Pregunta 1: ¿Cuál es mi color favorito?</h3>
+                <label><input type="radio" name="pregunta1" value="Rojo"> Rojo</label><br>
+                <label><input type="radio" name="pregunta1" value="Verde"> Verde</label><br>
+                <label><input type="radio" name="pregunta1" value="Azul"> Azul</label><br>
+                <label><input type="radio" name="pregunta1" value="Negro"> Negro</label>
+            </div>
+    
+            <div>
+                <h3>Pregunta 2: ¿Qué tipo de música prefiero escuchar?</h3>
+                <label><input type="radio" name="pregunta2" value="Metal"> Metal</label><br>
+                <label><input type="radio" name="pregunta2" value="Pop"> Pop</label><br>
+                <label><input type="radio" name="pregunta2" value="Electrónica"> Electrónica</label><br>
+                <label><input type="radio" name="pregunta2" value="Rock"> Rock</label>
+            </div>
+    
+            <div>
+                <h3>Pregunta 3: ¿Cuál es tu deporte favorito?</h3>
+                <label><input type="radio" name="pregunta3" value="Boxeo"> Boxeo</label><br>
+                <label><input type="radio" name="pregunta3" value="Baloncesto"> Baloncesto</label><br>
+                <label><input type="radio" name="pregunta3" value="Golf"> Golf</label>
+            </div>
+    
+            <button type="submit">Enviar Respuestas</button>
+        </form>
+    </section>
+    
+    <script>
+        document.getElementById('quiz-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            alert('Gracias por participar en el cuestionario!');
+            this.reset(); // Resetea el formulario después de enviar
+        });
+    </script>
+    
+</main>
+
+</body>
+</html>
